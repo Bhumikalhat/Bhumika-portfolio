@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+--bg: #0b1220;
+--card: #0f1724;
+}
+
+
+body{
+@apply bg-slate-50 text-slate-900;
+}
+
+
+/* Dark theme utilities will be applied via class 'dark' on html/body */
+.dark body{
+background: var(--bg);
+color: #e6eef8;
+}
