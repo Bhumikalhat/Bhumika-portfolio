@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # ✅ this gives the bot permission to push to gh-pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -31,6 +34,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          external_repository: bhumikalhat/bhumika-portfolio
           publish_branch: gh-pages
-
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
